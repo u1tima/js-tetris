@@ -4,11 +4,21 @@ const game = new Game();
 
 window.game = game;
 
+// for (let index = 0; index < 4; index++) {
+//     game.rotatePiece();
+//     console.table(game.active.blocks)
 
-for (let index = 0; index < 25; index++) {
-    game.movePieceDown();
-    
-}
+// }
 
+game.rotatePiece();
+game.movePieceLeft();
+game.rotatePiece();
 
-console.log(game.board);
+console.table(game.active.blocks);
+
+game.movePieceRight();
+game.rotatePiece();
+game.lockPiece();
+
+console.table(game.active.blocks);
+console.table(game.board);
